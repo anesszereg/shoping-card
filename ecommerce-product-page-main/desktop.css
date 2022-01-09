@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200&family=Manrope:wght@200&family=Raleway:wght@100&family=Zen+Old+Mincho:wght@900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* background-color: hotpink; */
+}
+.bigcontainer{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    text-align: center;
+    font-size: 18;
+    font-family: "Arima Madurai", cursive;
+}
+.sidenav{
+    display: none;
+}
+.logoname{
+    /* margin-top: 9px; */
+    text-align: start;
+    
+    height: 4vh;
+}
+.logo{
+ display: none;   
+}
+.navbar , .left ,.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 20px */
+}
+.navbar{
+    justify-content: space-between;
+    margin: 20px 130px;
+}
+.left,.right{
+    gap: 50px;
+}
+.cart{
+    height: 5vh;
+    
+}
+.avatar{
+    height: 8vh;
+}
+.sidenav-desktop{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 40px;
+
+}
+    /* gap */
+    /* justify-content: space-between; */
+    /* justify-content: center; */
+a{
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+        
+}
+.btn-left , .btn-right{
+    display: none;
+}
+.img1 img{
+    width: 70vh;
+    height: 60vh;
+    border-radius: 20px;
+
+}
+.img-p img{
+    height: 14vh;
+    border-radius: 10px;
+}
+
+.image-desktop{
+    display: flex;
+    gap: 27px;
+    margin-top: 20px;
+    justify-content: center;
+
+}
+.scroll{
+    text-align: start;
+    margin-left: 50px;
+    /* display: flex; */
+}
+
+
+.btn-desktop{
+    display: none;
+}
+.desktop{
+    display: flex;
+    padding: 15px 90px 0;
+    /* margin-top: -50px; */
+}
+
+.right-desktop{
+    margin-top: 50px;
+    margin-left: 80px;
+    text-align: start;
+}
+
+h3{
+    color: hsl(26, 100%, 55%);
+}
+h1{
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.prix-desktop{
+    display: flex;
+    gap: 20px;
+    font-size: 25px;
+}
+.promotion{
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%);
+    height: 25px;
+    width: 37px;
+    font-size: 16px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 6px;
+
+}
+.prix-desktop  b{
+    font-weight: bolder;
+    /* font-size: 25px; */
+}
+.right2 {
+    color: rgb(165, 161, 161);
+    text-decoration: line-through;
+    /* font-size: 20px ; */
+}
+
+.boxs{
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+.box{
+    width: 150px;
+    border: none;
+  background-color: hsl(223, 64%, 98%);
+  height: 8vh;
+  border-radius: 6px;
+  overflow: hidden;
+}
+/* .button1{
+    display: flex;
+    justify-content: space-between;
+
+} */
+
+button {
+    background: none;
+    border: none;
+}
+.button1 {
+    display: flex;
+    margin: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn1 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 12px;
+    color:white;
+    margin-top: 15px;
+    align-content: space-around;
+    width: 200px;
+}
+.box1 {
+    
+    width: 200px;
+    background-color: hsl(26, 100%, 55%);
+    overflow: hidden;
+    box-shadow:5PX 0 10PX 1px  hsl(26, 100%, 55%);
+  }

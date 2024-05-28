@@ -2,213 +2,106 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta
-        name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- displays site properly based on user's device -->
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-        <title>Frontend Mentor | E-commerce product page</title>
-        <link
-        rel="stylesheet" href="./index.css" media="screen and (min-width:140px) and (max-width:1000px)">
-         <link
-        rel="stylesheet" href="./desktop.css" media="screen and (min-width:1000px) and (max-width:2000px) "> 
-        <!-- <link rel="stylesheet" href="desktop.css"> -->
-        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-        <style>
-            .attribution {
-                font-size: 11px;
-                text-align: center;
-            }
-            .attribution a {
-                color: hsl(228, 45%, 44%);
-            }
-        </style>
+        <link rel="stylesheet" href="desktop.css">
+        <title>Sneaker Company</title>
     </head>
     <body>
         <div class="bigcontainer">
             <div class="navbar">
                 <div class="left">
-                    <img src="./images/icon-menu.svg" class="logo " alt="" style="font-size:30px;cursor:pointer" onclick="openNav()">
-                    <img src="./images/logo.svg" class="logoname" alt="">
+                    <img src="./images/icon-menu.svg" class="logo" alt="Menu" style="font-size:30px;cursor:pointer" onclick="openNav()">
+                    <img src="./images/logo.svg" class="logoname" alt="Logo">
                     <div class="sidenav-desktop">
-                        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
                         <a href="#">Collection</a>
                         <a href="#">Men</a>
                         <a href="#">Women</a>
                         <a href="#">About</a>
                         <a href="#">Contact</a>
-    
                     </div>
                 </div>
                 <div class="right">
-                    <img src="./images/icon-cart.svg" class="cart" alt="">
-                    <img src="./images/image-avatar.png" class="avatar" alt="">
+                    <div id="box">
 
+                        <img src="./images/icon-cart.svg" class="cart" alt="Cart">
+                        <div class="number_of_orders">0</div>
+                        <div class="cart_container"></div>
+                       
+                    </div>
+                    <img src="./images/image-avatar.png" class="avatar" alt="Avatar">
                 </div>
             </div>
             <div class="desktop">
-            <div class="center">
-                <div class="scroll">
-                    <button class="btn-desktop"><img src="./images/icon-previous.svg" alt="" class="btn-left" ></button>
-                    <div class="slide img1" ><img src="./images/image-product-1.jpg" class="product-img" alt=""></div>
-                    <div class="image-desktop">
-                    <div class="slide img-p"><img src="./images/image-product-1.jpg" class="product-img" alt=""></div>
-                    <div class="slide img-p"><img src="./images/image-product-2.jpg" class="product-img" alt=""></div>
-                    <div class="slide img-p "><img src="./images/image-product-3.jpg" class="product-img" alt=""></div>
-                    <div class="slide img-p"><img src="./images/image-product-4.jpg" class="product-img" alt=""></div>
-                    <button class="btn-desktop"><img src="./images/icon-next.svg" alt="" class="btn-right" ></button>
-                </div>
-                
-                </div>
+                <div class="center">
+                    <div class="scroll">
 
-            </div>
-            <div class="undercenter right-desktop">
-                <h3>Sneaker Company</h3>
-                <h1>
-                    Fall Limited Edition
-                    <br>
-                    Sneakers</h1>
-                <b>These low-profile sneakers are your perfect casual wear companion. Featuring a 
-                                                                                        durable rubber outer sole, they’ll withstand everything the weather can offer.
-                </b>
-                <div class="prix">
-                    <div class="left1 prix-desktop" >
-                        <b>$125.00</b>
-                        <div class="promotion">
-                            <b>50%</b>
+                        <div class="slide img1"><img src="./images/image-product-1.jpg" class="product-img" alt="Product Image 1" id="main_image"></div>
+                        <div class="image-desktop">
+                            <div class="img-p"><img src="./images/image-product-1.jpg" class="product-img" alt="Product Image 1" id="img1"></div>
+                            <div class="img-p"><img src="./images/image-product-2.jpg" class="product-img" alt="Product Image 2" id="img2"></div>
+                            <div class="img-p"><img src="./images/image-product-3.jpg" class="product-img" alt="Product Image 3" id="img3"></div>
+                            <div class="img-p"><img src="./images/image-product-4.jpg" class="product-img" alt="Product Image 4" id="img4"></div>
+
                         </div>
                     </div>
-                    <div class="right2">
-                        <b>$250.00</b>
+                </div>
+                <div class="undercenter right-desktop">
+                    <h3>Sneaker Company</h3>
+                    <h1 id="titre_produit">Fall Limited Edition<br>Sneakers</h1>
+                    <b>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</b>
+                    <div class="prix">
+                        <div class="left1 prix-desktop">
+                            $<b id="price_product">125.00</b>
+                            <div class="promotion">
+                                <b>50%</b>
+                            </div>
+                        </div>
+                        <div class="right2">
+                            <b>$250.00</b>
+                        </div>
+                    </div>
+                    <div class="boxs">
+                        <div class="button1">
+                            <button id="plus-btn"><img src="./images/icon-plus.svg" class="btn-plus" alt="Plus"></button>
+                            <div class="number" id="quantity">1</div>
+                            <button id="minus-btn"><img src="./images/icon-minus.svg" class="btn-minus" alt="Minus"></button>
+                        </div>
+                        <button class="btn1" id="add-to-cart-btn">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="white" fill-rule="nonzero"/></svg>
+                            <h2>add to cart</h2>
+                        </button>
+                    </div>
+                    <div class="sidenav" id="mySidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="#">Collection</a>
+                        <a href="#">Men</a>
+                        <a href="#">Women</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
                     </div>
                 </div>
-                <div class="boxs">
-                <div class="box">
-                    <div class="button1">
-                        <button><img src="./images/icon-plus.svg" class="btn-plus" alt=""></button>
-                        <div class="number">0</div>
-                        <button><img src="./images/icon-minus.svg" class="btn-minus" alt=""></button>
-                    </div>
-                </div>
-                <div class="box box1">
-                    <button class="btn1">
-                        <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="white" fill-rule="nonzero"/></svg>
-                        <h2>add to cart</h2>
-                    </button>
-                </div>
             </div>
-                <div class="sidenav" id="mySidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#">Collection</a>
-                    <a href="#">Men</a>
-                    <a href="#">Women</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
-
-                </div>
-                <!-- <span class="dot" onclick="currentSlide(1)"></span>
-                                <span class="dot" onclick="currentSlide(2)"></span>
-                                <span class="dot" onclick="currentSlide(3)"></span> -->
-
-
-            </div>
-        </div>
-            <div class="cart-container"></div>
-
 
         </div>
 
 
+        <div class="filter">
+
+            <div style="display: flex; align-items: center;">
+
+                <button class="btn-desktop btn-left" id="prev-btn"><img src="./images/icon-previous.svg" alt="Previous" class="btn-left"></button>
+                <div class="slide img1"><img src="./images/image-product-1.jpg" class="product-img" alt="Product Image 1" id="main_image"></div>
+                <button class="btn-desktop btn-right" id="next-btn"><img src="./images/icon-next.svg" alt="Next" class="btn-right"></button>
+            </div>
+            <div class="image-desktop">
+                <div class="img-p"><img src="./images/image-product-1.jpg" class="product-img" alt="Product Image 1" id="img1"></div>
+                <div class="img-p"><img src="./images/image-product-2.jpg" class="product-img" alt="Product Image 2" id="img2"></div>
+                <div class="img-p"><img src="./images/image-product-3.jpg" class="product-img" alt="Product Image 3" id="img3"></div>
+                <div class="img-p"><img src="./images/image-product-4.jpg" class="product-img" alt="Product Image 4" id="img4"></div>
+            </div>
+        </div>
+        <script src="https://kit.fontawesome.com/07bab012cc.js" crossorigin="anonymous"></script>
         <script src="index.js"></script>
-        <script>
-            function openNav() {
-                document.getElementById("mySidenav").style.width = "250px";
-            }
-
-            function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-            }
-
-            // function backimage() {
-            //     document.getElementsByClassName("product-img")
-            // }
-
-
-            
-
-        
-
-
-            // const btnleft=document.querySelector(".btnleft") 
-            // const btnright=document.querySelector(".btnright")
-            // const slide = document.getElementsByClassName("center");
-            
-            
-            // var slideIndex = 1;
-            // showSlides(slideIndex);
-
-
-            // function showSlides(n) {
-            //     var i;
-            //     var slides = document.getElementsByClassName("product-img")
-            //     // var dots = document.getElementsByClassName("");
-            //     if (n > slides.length) {
-            //         slideIndex = 1
-            //     }
-            //     if (n < 1) {
-            //         slideIndex = slides.length
-            //     }
-            //     for (i = 0; i < slides.length; i++) {
-            //         slides[i].style.display = "none";
-            //     }
-            //     // for (i = 0; i < dots.length; i++) {
-            //     //     dots[i].className = dots[i].className.replace(" active", "");
-            //     // }
-            //     slides[slideIndex - 1].style.display = "block";
-            //     // dots[slideIndex - 1].className += " active";
-            // }
-
-            // btnleft.addEventListener("click",function currentSlide(n) {
-            //     console.log("click");
-            //     showSlides(slideIndex = n);
-            // } )
-
-            // btnright.addEventListener("click",function plusSlides(n) {
-            //     console.log("click");
-            //     showSlides(slideIndex += n);
-            // })
-
-            // var slideIndex = 1;
-            // showSlides(slideIndex);
-
-            // function plusSlides(n) {
-            //     showSlides(slideIndex += n);
-            // }
-
-            // function currentSlide(n) {
-            //     showSlides(slideIndex = n);
-            // }
-
-            // function showSlides(n) {
-            //     var i;
-            //     var slides = document.getElementsByClassName("center");
-            //     var dots = document.getElementsByClassName("dot");
-            //     if (n > slides.length) {
-            //         slideIndex = 1
-            //     }
-            //     if (n < 1) {
-            //         slideIndex = slides.length
-            //     }
-            //     for (i = 0; i < slides.length; i++) {
-            //         slides[i].style.display = "none";
-            //     }
-            //     for (i = 0; i < dots.length; i++) {
-            //         dots[i].className = dots[i].className.replace(" active", "");
-            //     }
-            //     slides[slideIndex - 1].style.display = "block";
-            //     dots[slideIndex - 1].className += " active";
-            // }
-        </script>
     </body>
 </html>
